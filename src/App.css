@@ -15,6 +15,15 @@ body {
     display: inline-block;
     padding: 1rem;
   }
+  nav a:hover {
+    background-color: #eee;
+  }
+  nav a:active {
+    background-color: #eee;
+  }
   .main {
     padding: 1rem;
+  }
+  .dashboard {
+    padding: 1rem 0;
   }

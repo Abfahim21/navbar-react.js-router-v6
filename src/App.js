@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import Feature from './components/Feature';
 import About from './components/About';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -12,16 +13,16 @@ function App() {
       <nav className='navbar'>
         <ul>
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/" activeClassName="active" end>HOME</Link>
           </li>
           <li>
-            <Link to="about">ABOUT</Link>
+            <Link to="about"  activeClassName="active">ABOUT</Link>
           </li>
           <li>
-            <Link to="feature">FEATURES</Link>
+            <Link to="feature" activeClassName="active">FEATURES</Link>
           </li>
           <li>
-            <Link to="contact">CONTACT</Link>
+            <Link to="contact" activeClassName="active">CONTACT</Link>
           </li>
         </ul>
       </nav>
@@ -29,9 +30,11 @@ function App() {
       <div className="main">
       <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='about' element={<About/>}/>
-          <Route path='features' element={<Feature/>}/>
+          <Route path='about/*' element={<About/>}/>
+          <Route path='feature' element={<Feature/>}/>
           <Route path='contact' element={<Contact/>}/>
+          <Route path='/*' element={<NotFound/>}/>
+         
       </Routes>
       </div>
       
